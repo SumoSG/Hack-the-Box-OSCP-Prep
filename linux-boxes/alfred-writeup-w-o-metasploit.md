@@ -76,6 +76,16 @@ The msfconsole was set up to listen for the reverse shell.
 
 ![image](https://github.com/user-attachments/assets/3bd507ba-128d-4dd1-8ef8-bd8790c29e65)
 
+The rev_shell.exe file was executed, resulting in the successful acquisition of a Meterpreter shell.
+
+![image](https://github.com/user-attachments/assets/bf75f2fc-7136-4fa6-b504-82992a9a96c2)
+
+Two privileges, SeDebugPrivilege and SeImpersonatePrivilege, can be observed as being enabled. The Incognito module will be utilized to exploit this vulnerability.
+
+![image](https://github.com/user-attachments/assets/517f3437-e3a2-48a5-ab61-98e4c452ad75)
+
+The “load incognito” command is used to load the Incognito module in Metasploit. It should be noted that the “use incognito” command may need to be employed if the previous command does not work. Additionally, it is important to ensure that your Metasploit is up to date.
+
 
 
 
