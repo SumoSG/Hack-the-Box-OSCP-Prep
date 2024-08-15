@@ -34,8 +34,17 @@ After successfully logging in, navigation through various options was initiated.
 
 ![image](https://github.com/user-attachments/assets/809f477d-1b64-437a-958d-73b1f98c6c08)
 
+A Groovy script reverse shell script was searched for on Google and subsequently located. It was employed to obtain a reverse shell.
+
+![image](https://github.com/user-attachments/assets/8f5f713e-5875-4e1c-bcad-413c050d6a08)
+
+![image](https://github.com/user-attachments/assets/da967f3d-e12b-4c2f-b249-7d615a5202e7)
 
 
+![image](https://github.com/user-attachments/assets/41355bdf-3451-4df2-874c-4e512942d595)
 
 
+![image](https://github.com/user-attachments/assets/90e237ef-9b31-4c8e-b253-8cd13c3a7a60)
+
+The Groovy reverse shell script was used to establish a reverse shell, and the LPORT was monitored on my attacker machine. A shell of the user “Bruce” was obtained.
 
