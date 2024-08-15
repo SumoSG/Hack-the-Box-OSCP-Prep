@@ -86,6 +86,27 @@ Two privileges, SeDebugPrivilege and SeImpersonatePrivilege, can be observed as 
 
 The “load incognito” command is used to load the Incognito module in Metasploit. It should be noted that the “use incognito” command may need to be employed if the previous command does not work. Additionally, it is important to ensure that your Metasploit is up to date.
 
+![image](https://github.com/user-attachments/assets/22cb7b40-4256-4d55-81f8-494b53192639)
+
+To check the available tokens, the “list_tokens -g” command is entered. It can be observed that the BUILTIN\Administrators token is available.
+
+![image](https://github.com/user-attachments/assets/0967793b-4bac-4ced-bb8b-ab99262ddd3c)
 
 
+
+
+The impersonate_token “BUILTIN\Administrators” command is utilized to impersonate the Administrators’ token. The output of the “getuid” command is sought after.
+
+![image](https://github.com/user-attachments/assets/6878dad0-16c5-467a-b091-0480b91bfdf0)
+
+![image](https://github.com/user-attachments/assets/83a73da8-d2f4-436d-b9ae-76923a419122)
+
+
+Despite possessing a higher privileged token, the permissions of a privileged user may not be available (this is attributed to the way Windows manages permissions, relying on the process’s Primary Token rather than the impersonated token to establish its capabilities and limitations).
+
+To address this, it is important to migrate to a process with the correct permissions, as indicated in the previous answer. The most secure choice is the services.exe process. Initially, employ the “ps” command to list processes and identify the PID of the services.exe process. Subsequently, migrate to this process using the “migrate PID-OF-PROCESS” command.
+
+![image](https://github.com/user-attachments/assets/6483b2ec-297a-40cf-843e-d4be30ddf0d7)
+
+The root.txt file was located at C:\Windows\System32\config.
 
