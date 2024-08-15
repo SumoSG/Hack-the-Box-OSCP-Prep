@@ -54,4 +54,13 @@ The Groovy reverse shell script was used to establish a reverse shell, and the L
 
 The user’s home directory in Windows is the user’s Desktop. Navigating to the Desktop of the user, I was able to find the user flag.
 
+**Privielge escalation**
+To make privilege escalation easy, a decision was made to switch to a Meterpreter shell. The process of creating a Meterpreter reverse shell was initiated in order to obtain a reverse shell.
+
+![image](https://github.com/user-attachments/assets/05542ece-76a4-4190-98d9-4e1d5b78f7c5)
+
+After the payload had been generated, the process of transferring the reverse shell from the attacker machine was initiated.
+
+A Python server was created for file transfer from the location of the rev-shell.exe in the attacker machine.
+![image](https://github.com/user-attachments/assets/92afa088-ddde-4ce5-837d-83fb451dcf72)
 
