@@ -48,3 +48,10 @@ A Groovy script reverse shell script was searched for on Google and subsequently
 
 The Groovy reverse shell script was used to establish a reverse shell, and the LPORT was monitored on my attacker machine. A shell of the user “Bruce” was obtained.
 
+![image](https://github.com/user-attachments/assets/c1b7c5c0-f552-4add-986d-617019f7fd9c)
+
+![image](https://github.com/user-attachments/assets/ab06e2f7-39c9-45d9-b937-dba5fb412f12)
+
+The user’s home directory in Windows is the user’s Desktop. Navigating to the Desktop of the user, I was able to find the user flag.
+
+
