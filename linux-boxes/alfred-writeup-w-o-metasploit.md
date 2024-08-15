@@ -64,3 +64,18 @@ After the payload had been generated, the process of transferring the reverse sh
 A Python server was created for file transfer from the location of the rev-shell.exe in the attacker machine.
 ![image](https://github.com/user-attachments/assets/92afa088-ddde-4ce5-837d-83fb451dcf72)
 
+![image](https://github.com/user-attachments/assets/2997b86c-730f-4f53-8031-91162a28b500)
+
+The tshell-name.exe was downloaded from the attacker's machine.
+
+![image](https://github.com/user-attachments/assets/de9727e0-90fd-43b2-9e28-4f14e0595ec9)
+
+The msfconsole was set up to listen for the reverse shell.
+
+![image](https://github.com/user-attachments/assets/2b74841b-2799-4861-aec8-7998512e5d74)
+
+![image](https://github.com/user-attachments/assets/3bd507ba-128d-4dd1-8ef8-bd8790c29e65)
+
+
+
+
