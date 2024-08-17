@@ -87,6 +87,32 @@ We can follow this by entering use 0. This select the module.
 
 To see the different options we need to adjust we can run show options.
 
+A lot of this is already set to defaults, so the only options we have to set are RHOSTS, which means the target host ip address, and RPORT. You can set it using set RHOSTS <ip>.
+
+Now all we need to do is enter run or exploit.
+
+We got access to a meterpreter shell:
+![image](https://github.com/user-attachments/assets/ad190d50-b6cb-4ced-a24d-e751f2ef0f10)
+
+![image](https://github.com/user-attachments/assets/69d78adf-85f1-4680-b4f2-f09b45d169cb)
+
+Now we need to find the user flag.
+
+We can use the following command to search for all txt files:
+
+search -f *.txt
+
+59 resulsts 
+![image](https://github.com/user-attachments/assets/80efaab5-23a8-4251-ab09-b517dc7be423)
+
+We are interested in this file 
+![image](https://github.com/user-attachments/assets/15e66b61-c827-42da-bf2d-1b26118fb232)
+
+Now all we need to do is read the file.
+
+Remember too use forward slashes.
+
+![image](https://github.com/user-attachments/assets/a1d99982-61a1-417e-816b-067d6b16d4fe)
 
 
-
+**Privilege Escalation**
