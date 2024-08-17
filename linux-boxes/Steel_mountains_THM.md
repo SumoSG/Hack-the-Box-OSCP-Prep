@@ -13,12 +13,13 @@ nmap -sC -sV 10.10.224.110 -oA initial
 
 We get back the following result showing that seven ports are open:
 
-Port 80: running Microsoft IIS httpd 8.5 HTTP method risky :Trace
-Port 135: msrpc 
-Port 139: netbios-ssn
-Port 445:  microsoft-ds       Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
-Port 3389: ssl/ms-wbt-server?
-Port 8080 : open  http               HttpFileServer httpd 2.3
+* Port 80: running Microsoft IIS httpd 8.5 HTTP method risky :Trace
+* Port 135: msrpc
+* Port 139: netbios-ssn
+* Port 445:  microsoft-ds       Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+* Port 3389: ssl/ms-wbt-server?
+* Port 8080 : open  http               HttpFileServer httpd 2.3 http-server-header: HFS 2.3
+
 
 
 
