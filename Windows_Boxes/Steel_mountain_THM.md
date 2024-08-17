@@ -153,6 +153,8 @@ No we need to replace the legitimate one. Enter a regular cmd shell from your me
 
 Before copying, we need to stop the service by entering:
 *sc stop AdvancedSystemCareService9*
+![image](https://github.com/user-attachments/assets/c375ee3b-aa40-45c9-b048-5f4fd51f0bb5)
+
 
 ![image](https://github.com/user-attachments/assets/203402e6-5081-467d-baca-58d37840ffae)
 
@@ -161,3 +163,12 @@ Before copying, we need to stop the service by entering:
 
 
 Then copy the file to the original location:
+Now we need to start a listener!
+
+*nc -lvnp 4443*
+
+Then restart the program to get a shell as root.
+![image](https://github.com/user-attachments/assets/43b6e119-ca74-4105-ba94-6d813157b494)
+
+
+![image](https://github.com/user-attachments/assets/9ac96fe6-bec3-422d-9612-7ccefedb3931)
