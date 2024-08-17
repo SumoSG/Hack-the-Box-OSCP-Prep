@@ -58,21 +58,35 @@ View the source code to see if we can find any other information. We see that th
 
 ![image](https://github.com/user-attachments/assets/9b04f2a8-adab-4d60-bdee-0baaae09a824)
 
+What is the CVE number to exploit this file server?
 
-Not only that, but we have exploits for that version underneath with links. We can also at this stage tell that it's a perfect 10 CVSS score (highest score a CVE can get). Now if we follow the second link we will find the CVE number:
+We know the name of the file version, and that it is running version 2.3. We can therefore use the searchsploit command (or look at exploitdb’s website). I entered the following command:
 
-![image](https://github.com/user-attachments/assets/22a36aaa-83c0-4c41-a395-cb866aab00f6)
+searchsploit HFS -w
+
+This gave me the following results. Note I used the -w flag to get a link to exploit-db.
+
+![image](https://github.com/user-attachments/assets/98505663-dd1b-4c86-a8b3-56c8941464a9)
+
+Of you look carefully you can see that there are are at least two exploits for version 2.3.x. Let’s try the Remote Command Execution (1) at the following link:
+
+https://www.exploit-db.com/exploits/34668?source=post_page-----90af67ec1af6--------------------------------
+
+Use Metasploit to get an initial shell. What is the user flag?
+
+Startup Metasploit by running msfconsole.
+
+The great thing about Metasploit is that we can search on CVE number. Let’s do this by running:
+
+search 2014–6287
+![image](https://github.com/user-attachments/assets/13289ada-5d7e-4f73-a02d-614f25f0dd5b)
+
+![image](https://github.com/user-attachments/assets/1fd2fdb3-c23a-4710-a8e3-a9b7360fdea3)
+
+We can follow this by entering use 0. This select the module.
+
+To see the different options we need to adjust we can run show options.
 
 
-![image](https://github.com/user-attachments/assets/0ad41b5e-261b-4c0b-b2f4-8779e26b3156)
-
-Now that we have found a potential attack vector - we boot up metasploit and search for the vulnerability:
-
-![image](https://github.com/user-attachments/assets/33861cc6-9db4-4d70-8f67-ad674f576477)
-
-Looks good - let's use it with `use 0` and then to confirm it's the same CVE, use `info`:
-![image](https://github.com/user-attachments/assets/0f6668cc-b84d-4106-927d-89db941f7469)
-
-Now that we know we have the correct CVE, we can `show options` and fill in the required information:
 
 
