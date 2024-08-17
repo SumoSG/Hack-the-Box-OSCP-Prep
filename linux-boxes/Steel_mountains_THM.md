@@ -41,3 +41,16 @@ Similarly, we run an nmap scan with the -sU flag enabled to run a UDP scan.
 
 nmap -sU -O -p- -oA udp $IP
 
+
+**Enumeration**
+I always start off with enumerating HTTP first. In this case both 80 and 8080 are open so we’ll start there.
+
+Ports 80 & 8080
+
+Visit the site on the browser.
+
+![image](https://github.com/user-attachments/assets/12aec968-4a0e-4c18-8c4d-7302df33f566)
+
+
+![image](https://github.com/user-attachments/assets/6de5a185-9e60-4c41-bc2a-eec9d4a12a2c)
+
