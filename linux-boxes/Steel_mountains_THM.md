@@ -61,6 +61,19 @@ View the source code to see if we can find any other information. We see that th
 
 Not only that, but we have exploits for that version underneath with links. We can also at this stage tell that it's a perfect 10 CVSS score (highest score a CVE can get). Now if we follow the second link we will find the CVE number:
 
+![image](https://github.com/user-attachments/assets/22a36aaa-83c0-4c41-a395-cb866aab00f6)
+
+
 ![image](https://github.com/user-attachments/assets/0ad41b5e-261b-4c0b-b2f4-8779e26b3156)
 
 Now that we have found a potential attack vector - we boot up metasploit and search for the vulnerability:
+
+![image](https://github.com/user-attachments/assets/33861cc6-9db4-4d70-8f67-ad674f576477)
+
+Looks good - let's use it with `use 0` and then to confirm it's the same CVE, use `info`:
+![image](https://github.com/user-attachments/assets/0f6668cc-b84d-4106-927d-89db941f7469)
+
+Now that we know we have the correct CVE, we can `show options` and fill in the required information:
+
+
+
