@@ -54,3 +54,13 @@ Visit the site on the browser.
 
 ![image](https://github.com/user-attachments/assets/6de5a185-9e60-4c41-bc2a-eec9d4a12a2c)
 
+View the source code to see if we can find any other information. We see that the photo on the port 80 is Employee of the month Bill Harper 
+
+![image](https://github.com/user-attachments/assets/9b04f2a8-adab-4d60-bdee-0baaae09a824)
+
+
+Not only that, but we have exploits for that version underneath with links. We can also at this stage tell that it's a perfect 10 CVSS score (highest score a CVE can get). Now if we follow the second link we will find the CVE number:
+
+![image](https://github.com/user-attachments/assets/0ad41b5e-261b-4c0b-b2f4-8779e26b3156)
+
+Now that we have found a potential attack vector - we boot up metasploit and search for the vulnerability:
