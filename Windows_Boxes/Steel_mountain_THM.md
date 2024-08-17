@@ -172,3 +172,6 @@ Then restart the program to get a shell as root.
 
 
 ![image](https://github.com/user-attachments/assets/9ac96fe6-bec3-422d-9612-7ccefedb3931)
+
+And we have system access!
+
