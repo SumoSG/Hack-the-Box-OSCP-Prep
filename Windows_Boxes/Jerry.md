@@ -42,5 +42,9 @@ I quickly find that the web service manager runs on /manager/html
 
 ![image](https://github.com/user-attachments/assets/af633c62-4676-4cee-8f75-39341a35076e)
 
+
+![image](https://github.com/user-attachments/assets/f02c3934-af0c-4eb5-9404-a47008d8b695)
+
+
 i now search for the default credentials for the tomcat apache server 
 
