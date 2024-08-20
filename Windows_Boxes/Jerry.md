@@ -11,9 +11,6 @@ nmap -p- --min-rate 10000 -T4 10.10.10.95
 
 ![image](https://github.com/user-attachments/assets/5a46ac1f-83d8-45c7-967a-9d3ea37adf4a)
 
-<div style="position: relative; margin-bottom: 1em;">
-    <pre style="background-color: #f6f8fa; padding: 1em; border-radius: 5px;">
-        <code id="codeSnippet">
           nmap -sS -v $IP --top-ports 1000 
 Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-08-20 21:00 +08
 Initiating Ping Scan at 21:00
