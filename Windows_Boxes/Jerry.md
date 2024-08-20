@@ -35,3 +35,12 @@ Port 8080: running http-proxy
 ![image](https://github.com/user-attachments/assets/b25868a2-2de4-48f2-a1e5-1537de6294ab)
 
 The gobuster, nikto and droopescan scans kept timing out. The web server seems to be not able to handle the requests that these tools were sending.
+
+
+
+![image](https://github.com/user-attachments/assets/5a828589-b52e-4680-b3f3-a8436e85fc3f)
+
+
+![image](https://github.com/user-attachments/assets/af633c62-4676-4cee-8f75-39341a35076e)
+
+
