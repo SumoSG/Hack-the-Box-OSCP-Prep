@@ -32,22 +32,3 @@ PORT     STATE SERVICE
 8080/tcp open  http-proxy                                                                                           
                                                              
         </code>
-    </pre>
-    <button onclick="copyToClipboard()" style="position: absolute; top: 10px; right: 10px; padding: 0.5em 1em; border: none; border-radius: 5px; background-color: #28a745; color: white; cursor: pointer;">
-        Copy
-    </button>
-</div>
-
-<script>
-    function copyToClipboard() {
-        var code = document.getElementById("codeSnippet").innerText;
-        var textarea = document.createElement("textarea");
-        textarea.value = code;
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand("copy");
-        document.body.removeChild(textarea);
-        alert("Copied to clipboard!");
-    }
-</script>
-
