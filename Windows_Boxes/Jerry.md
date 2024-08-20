@@ -11,7 +11,7 @@ nmap -p- --min-rate 10000 -T4 10.10.10.95
 
 ![image](https://github.com/user-attachments/assets/5a46ac1f-83d8-45c7-967a-9d3ea37adf4a)
 
-          nmap -sS -v $IP --top-ports 1000 
+ nmap -sS -v $IP --top-ports 1000 
 Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-08-20 21:00 +08
 Initiating Ping Scan at 21:00
 Scanning 10.10.10.95 [4 ports]
@@ -26,7 +26,10 @@ Nmap scan report for 10.10.10.95
 Host is up (0.045s latency).                                                                                        
 Not shown: 999 filtered tcp ports (no-response)                                                                     
 PORT     STATE SERVICE                                                                                              
-8080/tcp open  http-proxy                                                                                           
+8080/tcp open  http-proxy                                     
                                                              
-       We have only one open port 
-       Port 8080: running http-proxy 
+We have only one open port 
+Port 8080: running http-proxy 
+
+
+The gobuster, nikto and droopescan scans kept timing out. The web server seems to be not able to handle the requests that these tools were sending.
