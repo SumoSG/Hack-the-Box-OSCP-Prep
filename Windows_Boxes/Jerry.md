@@ -4,10 +4,11 @@
 **Reconnaissance**
 
 I run four quad nmap scans 
-*nmap -sS -v $IP --top-ports 1000
-**rustscan -a $IP --ulimit 5000
-***nmap -sU -v --top-ports 5 10.10.10.95
-nmap -p- --min-rate 10000 -T4 10.10.10.95
+
+1. nmap -sS -v $IP --top-ports 1000
+2. rustscan -a $IP --ulimit 5000
+3. nmap -sU -v --top-ports 5 10.10.10.95
+4. nmap -p- --min-rate 10000 -T4 10.10.10.95
 
 ![image](https://github.com/user-attachments/assets/5a46ac1f-83d8-45c7-967a-9d3ea37adf4a)
 
